@@ -1,0 +1,34 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #1e1b26;
+  font-family: 'Nunito';
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+.paragraph {
+  font-size: 14px;
+}
+
+.app {
+  font-family: 'Nunito';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

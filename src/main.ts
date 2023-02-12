@@ -1,14 +1,20 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+
+import 'element-plus/lib/theme-chalk/index.css'
+
+// deps
 import App from './App.vue'
 import router from './router'
-import './assets/main.css'
-import vuetify from './vuetify'
+
+// @ts-ignore
+import { registerSW } from 'virtual:pwa-register'
+
+registerSW({
+  onNeedRefresh() {},
+  onOfflineReady() {}
+})
 
 const app = createApp(App)
 
-app.use(createPinia())
-app.use(router)
-app.use(vuetify)
-
-app.mount('#app')
+app.use(createPinia()).use(router).mount('#app')
